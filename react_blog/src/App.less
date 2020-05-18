@@ -1,0 +1,35 @@
+.main-show {
+    display: flex;      // 声明flex布局容器
+    flex-direction: column;
+    min-height: 150px;
+    align-items:stretch;
+    height: auto ;
+
+    .top-part {
+        flex: 1;
+        border: solid 1px;
+            // 沾满该行，把其他项目挤到下一行
+    }
+
+    .content {
+        display: flex;
+        flex: 10;
+        .left-part {
+            flex:1;
+            border: solid 1px ;
+            
+        }
+    
+        .middle-part {
+            flex:3;
+            border: solid 1px ;
+        }
+    
+        .right-part {
+            flex:1;
+            border: solid 1px ;
+        }
+    }   
+
+}
+

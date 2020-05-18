@@ -1,8 +1,7 @@
-import React,{Component, Fragment} from 'react'
+// /App.js
+import React,{Component} from 'react'
 
-import {Route, Switch, Redirect} from 'react-router-dom'
-
-import {routers} from './routers'
+import {TopPart, LeftPart, MiddlePart ,RightPart} from './components'
 
 import './App.less'
 
@@ -10,26 +9,26 @@ export default class App extends Component {
     
     render() {
         return (
-            <Fragment>
-                <Switch>
-                    {
-                        routers.map(router => {
-                            return <Route
-                                key = {router.pathname}
-                                path = {router.pathname}
-                                exact = {router.exact}
-                                render = {(routerProps) => {
-                                    return <router.viewCompoment {...routerProps} />
-                                
-                                }}
-                            />
-                        })
-                    }
-                    <Redirect to='/404' />      {/* 搜寻不到路由时跳转404 */}
-                    
-                </Switch>
+            <div className='main-show'>
 
-            </Fragment>
+                <header className='top-part' >
+                    <TopPart />
+                </header>
+
+                <div className='content'>
+                    <aside className='left-part'>
+                        <LeftPart/>
+                    </aside>
+                    
+                    <main className='middle-part'>
+                        <MiddlePart/>
+                    </main>
+                    
+                    <aside className='right-part'>
+                        <RightPart/>
+                    </aside>               
+                </div>
+            </div>
         )
     }
 }

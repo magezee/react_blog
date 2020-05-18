@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 
-export default class Home extends Component {
+export default class TopPart extends Component {
     render() {
         return (
-            
+
             <div>
-                Home
+                这里是顶边栏
             </div>
         )
     }
