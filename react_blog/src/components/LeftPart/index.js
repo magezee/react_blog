@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 
 import {routers}  from '../../routers'
+import Navigation from '../Navigation'
+import  {home }from '../../public/icon'
 import './index.less'
 
 const navigation = routers.filter(router => router.isNav === true)      // 过滤掉不是导航用的路由
@@ -18,6 +20,7 @@ class LeftPart extends Component {
         return (
             
             <div className="navigation">
+                <Navigation icon={home}>111</Navigation>
                 {navigation.map(route => {
                     return <button
                             key={route.pathname}

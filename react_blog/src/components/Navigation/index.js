@@ -1,11 +1,27 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
+import './index.less'
 
-export default class Navigation extends Component {
-    render() {
-        return (
-            <div>
-                <img src={}></img>
+const  Navigation =({icon = null, children='按钮'}) => {
+
+    return (
+        <div className='navigation-content'>
+            { 
+            icon
+            ? 
+                <div className='navigation-icon'>
+                    <img src={icon}/>
+                </div> 
+            : 
+                <Fragment/> 
+            } 
+            
+            <div className='navigation-text-content'>
+            <span className='navigation-text'>{children}</span>
             </div>
-        )
-    }
+            
+        </div>
+    )
+    
 }
+
+export default Navigation
