@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 
 import {routers}  from '../../routers'
-import Navigation from '../Navigation'
+import {Button} from '../../components/UIcomponents'
 import  {home }from '../../public/icon'
 import './index.less'
 
@@ -20,7 +20,7 @@ class LeftPart extends Component {
         return (
             
             <div className="navigation">
-                <Navigation icon={home}>111</Navigation>
+                <Button icon={home}>111</Button>
                 {navigation.map(route => {
                     return <button
                             key={route.pathname}
